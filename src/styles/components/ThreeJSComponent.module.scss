@@ -1,0 +1,19 @@
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 99;
+  }
+  
+  .scoreBox {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: $highlight-color;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }

@@ -1,0 +1,32 @@
+.starsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0; 
+  pointer-events: none; 
+}
+
+.stars {
+  width: 2px;
+  height: 2px;
+  background-color: $color-white;
+  position: absolute;
+  border-radius: 50%;
+  animation: animateStars 10s linear infinite;
+  opacity: 0.8;
+
+}
+
+@keyframes animateStars {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(500px, 500px);
+    opacity: 0.3;
+  }
+}

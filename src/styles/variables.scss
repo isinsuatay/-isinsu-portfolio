@@ -1,0 +1,43 @@
+$primary-font: "Rubik Scribble", system-ui;
+
+$light-background: linear-gradient(
+  100deg,
+  #0d0f0e,
+  #0e1a34,
+  #0a2a39,
+  #2e4058,
+  #27243f,
+  #40384d,
+  #326244,
+  #409040
+);
+
+$dark-background: linear-gradient(
+  100deg,
+  #432e54,
+  #4b4376,
+  #215597,
+  #3b80c6,
+  #99bcec,
+  #8395c3,
+  #d1d4e8
+);
+
+$light-text-color: #000;
+$dark-text-color: #fff;
+$light-gray: #ccc;
+$highlight-color: #ff6347;
+$secondary-background: #f0f8ff;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-accent: #00bfff;
+$electric-cyan: #00ffff;
+$bright-green: #39ff14;
+
+$transparent-light: rgba(255, 255, 255, 0.1);
+$transparent-light-high-opacity: rgba(255, 255, 255, 0.8); 
+
+$box-shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+$box-shadow-dark: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.12);
+$box-shadow-accent: 0 4px 8px rgba(0, 191, 255, 0.3), 0 2px 4px rgba(0, 191, 255, 0.2);
+$box-shadow-default: 0 4px 20px rgba(0, 0, 0, 0.5);

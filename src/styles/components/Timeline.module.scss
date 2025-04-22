@@ -1,0 +1,95 @@
+.timeline {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: $transparent-light;
+
+  .event-date {
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+    color: $bright-green;
+    text-shadow: 0 0 2px $bright-green, 0 0 5px $bright-green;
+    font-size: 0.8rem;
+    background-color: $transparent-light;
+  }
+
+  .event-description {
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: $box-shadow-dark;
+    width: 100%;
+    max-width: 550px;
+    color: $color-accent; 
+    font-size: 0.9rem;
+    transition: transform 0.5s ease;
+
+    h3 {
+      color: $electric-cyan; 
+      margin-bottom: 8px;
+      text-shadow: 0 0 2px $electric-cyan, 0 0 5px $electric-cyan;
+      font-size: 1.1rem;
+    }
+
+    p {
+      color: $transparent-light-high-opacity;
+      line-height: 1.5;
+    }
+  }
+
+  .event-description:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-light;
+  }
+
+  .event {
+    display: flex;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    padding: 20px;
+    font-size: 0.8rem;
+  }
+
+  .timeline {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .event-date {
+    font-size: 1rem;
+    color: $color-white; 
+  }
+
+  .event-description {
+    font-size: 0.8rem;
+    color: $transparent-light-high-opacity;
+    background-color: $box-shadow-default;
+    padding: 12px;
+  }
+}

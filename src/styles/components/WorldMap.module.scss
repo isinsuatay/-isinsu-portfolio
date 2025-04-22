@@ -1,0 +1,46 @@
+.mapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: $color-black;
+    border-radius: 1rem;
+    box-shadow:$box-shadow-default;
+  }
+  
+  .svgWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .mapSvg {
+    width: 100%;
+    height: auto;
+  }
+  .mapSvg text {
+    display: none;
+  }
+  .locationText {
+    margin-top: 1rem;
+    color: $color-white;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  @keyframes pulseAnimation {
+    0% {
+      r: 10;
+      opacity: 1;
+    }
+    50% {
+      r: 16;
+      opacity: 0.4;
+    }
+    100% {
+      r: 10;
+      opacity: 1;
+    }
+  }
+

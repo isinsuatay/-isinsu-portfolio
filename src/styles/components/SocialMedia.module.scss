@@ -1,0 +1,30 @@
+.contact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 2.4rem;
+  z-index: 9999;
+
+  a {
+    color:$color-white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+      color:$color-accent;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+}

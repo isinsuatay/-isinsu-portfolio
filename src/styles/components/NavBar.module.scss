@@ -1,0 +1,160 @@
+.navbar {
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 999;
+}
+
+.scrolled {
+  background: rgba(15, 15, 30, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.3);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.glow {
+  text-shadow: 0 0 5px $electric-cyan, 0 0 10px $electric-cyan;
+  transition: text-shadow 0.3s ease;
+
+  &:hover {
+    text-shadow: 0 0 10px $electric-cyan, 0 0 20px $electric-cyan;
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  color: $electric-cyan;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  font-weight: bold;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: $electric-cyan;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  text-shadow: 0 0 5px $electric-cyan, 0 0 10px $electric-cyan, 0 0 15px $electric-cyan;
+
+  &:hover {
+    text-shadow: 0 0 10px $electric-cyan, 0 0 20px $electric-cyan, 0 0 30px $electric-cyan;
+  }
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  color: $electric-cyan;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(15deg);
+  }
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: $electric-cyan;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menuToggleOpenBar1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuToggleOpenBar2 {
+  opacity: 0;
+}
+
+.menuToggleOpenBar3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+
+  .navbar{
+    position: fixed;
+  }
+  .navLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 30, 0.9);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+    z-index: 998; 
+  }
+  .navLinksOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+    backdrop-filter: blur(10px);  
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .navLink {
+    font-size: 1.5rem;
+    color: $color-accent;
+    text-shadow: 0 0 5px $electric-cyan, 0 0 10px $electric-cyan, 0 0 15px $electric-cyan;
+    text-shadow: 0 0 2px $bright-green, 0 0 10px $color-black; 
+  }
+
+  .navLink:hover {
+    text-shadow: 0 0 10px $electric-cyan, 0 0 20px $electric-cyan, 0 0 30px $electric-cyan; 
+  }
+}

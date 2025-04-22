@@ -1,0 +1,42 @@
+.card {
+    background: $dark-background;
+    border-radius: 12px;
+    box-shadow: $box-shadow-light;
+    margin-bottom: 20px;
+    overflow: visible;
+    transition: box-shadow 0.2s ease;
+  
+    &:hover {
+      box-shadow: $box-shadow-dark;
+    }
+  }
+  
+  .header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+  
+    .open {
+      transform: rotate(180deg);
+    }
+  }
+  
+  .content {
+    padding: 0 1.5rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    overflow: hidden;
+    max-height: 1000px; 
+  }
+
